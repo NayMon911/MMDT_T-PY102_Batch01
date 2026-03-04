@@ -90,7 +90,7 @@ def doubleIt(head):
     curr = head
     while curr:
         curr.val = (curr.val*2) % 10
-        if curr.next and curr.val >4:
+        if curr.next or curr.val >4:
             curr.val += 1
         curr = curr.next
     return head
