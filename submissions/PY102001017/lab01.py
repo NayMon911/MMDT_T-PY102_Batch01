@@ -84,15 +84,14 @@ def doubleIt(head):
     - Use linked-list operations/pointer logic.
     - Avoid converting the entire list into an integer/string for the core solution.
     """
-    
-    if head.val > 4:
+    if head.val >= 5:
         head = Node(0, head)
     curr = head
     while curr:
         curr.val = (curr.val*2) % 10
-        if curr.next or curr.val >4:
+        if curr.next and curr.next.val >=5:
             curr.val += 1
         curr = curr.next
     return head
 
-
+    
